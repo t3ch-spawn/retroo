@@ -1,0 +1,57 @@
+@import url("https://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+@layer base {
+  .sub-heading {
+    @apply inter text-[75px] tracking-tighter font-semibold leading-[100%];
+  }
+}
+
+.geist {
+  font-family: "Geist Mono", monospace;
+}
+
+.inter {
+  font-family: "Inter Tight", sans-serif;
+}
+
+.no-clip {
+  overflow: visible !important;
+}
+
+.marquee {
+  animation: infiniteMarquee 18s infinite linear;
+  transition: animation-duration 1s ease-in-out;
+}
+
+@keyframes infiniteMarquee {
+  0% {
+    transform: translateX(0%);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.reverse-marquee {
+  animation: reverseInfiniteMarquee 18s infinite linear;
+}
+
+@keyframes reverseInfiniteMarquee {
+  0% {
+    transform: translateX(-100%);
+  }
+
+  100% {
+    transform: translateX(0%);
+  }
+}

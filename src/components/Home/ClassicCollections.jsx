@@ -170,7 +170,7 @@ function CollectionCard({ img, era, heading, power, exclusive, nickname }) {
     <div className="w-[460px] -1024:max-w-[300px] flex flex-col items-start justify-start">
       {/* Image */}
       {/* <img src={img} className="w-[460px] h-[579px]" alt="car" /> */}
-      <ParallaxContainer imgClass="aspect-[460/579]" imgSrc={img} />
+      <ParallaxContainer imgClass="aspect-[460/579] -1024:aspect-[300/377]" imgSrc={img} />
 
       {/* Heading */}
       <h3 className="text-[40px] -1024:text-[32px] mt-[15px] leading-[100%] tracking-tighter font-semibold inter">

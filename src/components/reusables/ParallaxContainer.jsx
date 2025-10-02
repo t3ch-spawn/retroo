@@ -43,6 +43,7 @@ export default function ParallaxContainer({
           trigger: contRef.current,
           scrub: true,
           end: "bottom 30%",
+          markers: true,
         },
       }
     );

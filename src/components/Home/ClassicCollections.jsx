@@ -1,11 +1,12 @@
 import React, { useRef } from "react";
-import Button from "./reusables/Button";
-import rolls from "../assets/rolls_collect.png";
-import ford from "../assets/ford_collect.png";
-import lambo from "../assets/lambo_collect.png";
-import ferrari from "../assets/ferrari_collect.png";
+import Button from "../reusables/Button";
+import rolls from "@/assets/rolls_collect.png";
+import ford from "@/assets/ford_collect.png";
+import lambo from "@/assets/lambo_collect.png";
+import ferrari from "@/assets/ferrari_collect.png";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
+import ParallaxContainer from "../reusables/ParallaxContainer";
 
 export default function ClassicCollections() {
   return (
@@ -164,7 +165,8 @@ function CollectionCard({ img, era, heading, power, exclusive, nickname }) {
   return (
     <div className="w-[460px] flex flex-col items-start justify-start">
       {/* Image */}
-      <img src={img} className="w-[460px] h-[579px]" alt="car" />
+      {/* <img src={img} className="w-[460px] h-[579px]" alt="car" /> */}
+      <ParallaxContainer imgClass="aspect-[460/579]" imgSrc={img} />
 
       {/* Heading */}
       <h3 className="text-[40px] mt-[15px] leading-[100%] tracking-tighter font-semibold inter">

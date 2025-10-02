@@ -1,4 +1,5 @@
-import enzo from "../assets/enzo.png";
+import enzo from "@/assets/enzo.png";
+import ParallaxContainer from "../reusables/ParallaxContainer";
 
 export default function Vision() {
   return (
@@ -8,14 +9,15 @@ export default function Vision() {
         <h2 className="sub-heading max-w-[671px] text-anim">
           "i don't sell cars, i sell dreams." - enzo ferrari
         </h2>
-        <img src={enzo} className="max-w-[654px] aspect-[654/585]" alt="enzo" />
+        <ParallaxContainer
+          imgSrc={enzo}
+          imgClass="aspect-[654/585] max-w-[654px]"
+        />
       </div>
 
       {/* Vision */}
       <div className="max-w-[471px] flex flex-col gap-[24px]">
-        <h2 className="sub-heading max-w-[671px] text-anim">
-          our vision
-        </h2>
+        <h2 className="sub-heading max-w-[671px] text-anim">our vision</h2>
         <p className="leading-[100%] tracking-tighter text-anim">
           “retro” is a portal into a bygone era—a carefully curated homage to
           the golden age of automotive design and passion. here, every vintage

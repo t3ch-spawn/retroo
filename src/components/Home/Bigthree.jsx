@@ -1,8 +1,8 @@
 import React from "react";
-import Button from "./reusables/Button";
-import ferrari from "../assets/ferrari_logo.png";
-import porsche from "../assets/porsche_logo.png";
-import lambo from "../assets/lambo_logo.png";
+import Button from "../reusables/Button";
+import ferrari from "@/assets/ferrari_logo.png";
+import porsche from "@/assets/porsche_logo.png";
+import lambo from "@/assets/lambo_logo.png";
 
 export default function Bigthree() {
   return (

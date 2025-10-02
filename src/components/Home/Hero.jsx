@@ -1,17 +1,20 @@
 import React from "react";
-import orangeCar from "../assets/hero_img.png";
+import orangeCar from "@/assets/hero_img.png";
+import ParallaxContainer from "../reusables/ParallaxContainer";
 
 export default function Hero() {
   return (
-    <section className="flex flex-col justify-center items-center pb-[40px] gap-[24px] pt-[97px]">
+    <section className="flex flex-col justify-center items-center pb-[40px] gap-[24px] pt-[60px]">
       {/* Heading */}
-      <h1 className="text-[100px] font-semibold inter">retro</h1>
+      <h1 className="logo-text">retro</h1>
 
       {/* Huge image */}
-      <img
-        src={orangeCar}
-        alt="car"
-        className="w-full h-[762px] object-cover mt-[26px]"
+      <ParallaxContainer
+        pFrom={-20}
+        pTo={30}
+        imgSrc={orangeCar}
+        className="w-full mt-[26px]"
+        imgClass="aspect-[1440/762]"
       />
 
       {/* paragraph */}
@@ -21,8 +24,6 @@ export default function Hero() {
         portal, timeless rides reveal whispered secrets of an era where passion
         reigned supreme
       </p>
-
-
     </section>
   );
 }

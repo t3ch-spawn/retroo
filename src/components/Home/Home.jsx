@@ -14,7 +14,7 @@ export default function Home() {
     <>
       {/* <Navbar /> */}
       <Hero />
-      {/* <ClassicCollections /> */}
+      <ClassicCollections />
       <Vision />
       <Bigthree />
       <Vintage />

@@ -108,7 +108,7 @@ function CollectionMarquee({ reverse }) {
     //     },
     //     "<"
     //   );
-  });
+  }, []);
 
   const parent = useRef(null);
 
@@ -143,7 +143,7 @@ function CollectionMarquee({ reverse }) {
     <div className="overflow-hidden flex w-full marquee-parent" ref={parent}>
       <div
         ref={row1}
-        className={`flex w-fit justify-start items-start gap-[20px] pl-[20px] marq  ${
+        className={`flex w-fit justify-start items-start gap-[20px] pl-[20px] h-[730px] -1024:h-[552px] ${
           reverse ? "reverse-marquee translate-x-[-100%]" : "marquee"
         } `}
       >
@@ -153,7 +153,7 @@ function CollectionMarquee({ reverse }) {
       </div>
       <div
         ref={row2}
-        className={`flex w-fit justify-start items-start gap-[20px] pl-[20px] marq  ${
+        className={`flex w-fit justify-start items-start gap-[20px] pl-[20px] h-[730px] -1024:h-[552px] ${
           reverse ? "reverse-marquee translate-x-[-100%]" : "marquee"
         } `}
       >
@@ -169,8 +169,11 @@ function CollectionCard({ img, era, heading, power, exclusive, nickname }) {
   return (
     <div className="w-[460px] -1024:max-w-[300px] flex flex-col items-start justify-start">
       {/* Image */}
-      {/* <img src={img} className="w-[460px] h-[579px]" alt="car" /> */}
-      <ParallaxContainer imgClass="aspect-[460/579] -1024:aspect-[300/377]" imgSrc={img} />
+      {/* <img src={img} className="aspect-[460/579] -1024:aspect-[300/377]" alt="car" /> */}
+      <ParallaxContainer
+        imgClass="aspect-[460/579] -1024:aspect-[300/377] w-full"
+        imgSrc={img}
+      />
 
       {/* Heading */}
       <h3 className="text-[40px] -1024:text-[32px] mt-[15px] leading-[100%] tracking-tighter font-semibold inter">

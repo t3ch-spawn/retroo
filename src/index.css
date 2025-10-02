@@ -17,7 +17,7 @@
 
 @layer base {
   .sub-heading {
-    @apply inter text-[75px] tracking-tighter font-semibold leading-[100%];
+    @apply inter text-[75px] -1024:text-[50px] tracking-tighter font-semibold leading-[100%];
   }
   .logo-text {
     @apply text-[100px] font-semibold inter;
@@ -113,9 +113,13 @@
 }
 
 .wheelCont img {
-  max-width: 40px;
+  max-width: 30px;
   width: 100%;
   z-index: 700;
   position: relative;
   filter: invert(1);
+}
+
+.sjnwei {
+  background: #e65d00;
 }

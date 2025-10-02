@@ -15,10 +15,8 @@ export default function CustomCursor() {
 
     let lastX = 0;
     let lastY = 0;
-    const threshold = 30; // pixels
+    const threshold = 20; // pixels
     document.addEventListener("mousemove", (e) => {
-      const dx = Math.abs(e.clientX - lastX);
-      const dy = Math.abs(e.clientY - lastY);
       if (!cursorDot || !cursor) return;
       if (cursorDot.classList.contains("should-move")) {
         cursorDot.style.top = e.clientY + "px";
@@ -38,14 +36,20 @@ export default function CustomCursor() {
         cursorDot.classList.add("active");
         cursor.classList.add("active");
 
+        const dx = Math.abs(e.clientX - lastX);
+        const dy = Math.abs(e.clientY - lastY);
+
+        // Check if difference between current x and y position is greater than threshold value
         if (dx > threshold || dy > threshold) {
           lastX = e.clientX;
           lastY = e.clientY;
           const wheelCont = document.createElement("div");
           const wheelImg = document.createElement("img");
 
-          // Pick a random number between 0 and 4
+          // Pick a random number between 0 and 5
           const randomIdx = gsap.utils.random(0, 5);
+
+          // Use that number to get an svg src from the wheels array
           wheelImg.src = wheels[Math.floor(randomIdx)];
           wheelCont.classList.add("wheelCont");
           wheelCont.appendChild(wheelImg);
@@ -55,7 +59,6 @@ export default function CustomCursor() {
           document.body.appendChild(wheelCont);
 
           const randomId = "id-" + Math.random().toString(36).substr(2, 9);
-
           wheelCont.id = randomId;
           gsap
             .timeline()
@@ -65,12 +68,11 @@ export default function CustomCursor() {
             .to(`#${randomId}`, {
               scale: 0,
               stagger: 0.02,
-              delay: 0.5,
+              delay: 0.3,
               onComplete: () => {
                 wheelCont.remove();
               },
             });
-          setTimeout(() => {}, 1000);
         }
       }
     });
@@ -78,9 +80,9 @@ export default function CustomCursor() {
 
   return (
     <>
-      <div className="custom-cursor opacity-0  fixed bg-transparent border-[1px] border-black rounded-full h-[30px] w-[30px] translate-x-[-50%] translate-y-[-50%]  z-[210] pointer-events-none -1024:hidden"></div>
+      {/* <div className="custom-cursor opacity-0  fixed bg-transparent border-[1px] border-black rounded-full h-[30px] w-[30px] translate-x-[-50%] translate-y-[-50%]  z-[210] pointer-events-none -1024:hidden"></div>
 
-      <div className="cursor-dot opacity-0 should-move  h-[5px] w-[5px] fixed bg-black rounded-[50%] pointer-events-none z-[215] translate-x-[-50%] translate-y-[-50%] -1024:hidden"></div>
+      <div className="cursor-dot opacity-0 should-move  h-[5px] w-[5px] fixed bg-black rounded-[50%] pointer-events-none z-[215] translate-x-[-50%] translate-y-[-50%] -1024:hidden"></div> */}
     </>
   );
 }

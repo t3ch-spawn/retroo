@@ -8,7 +8,7 @@ export default function Bigthree() {
   return (
     <section className="  text-center text-white ">
       {/* Container for text */}
-      <div className="bg-[#1B3A4B] pt-[79px] pb-[107px] flex flex-col justify-center items-center gap-[21px] ">
+      <div className="bg-[#1B3A4B] pt-[79px] pb-[107px] -800:pb-[79px] flex flex-col justify-center items-center gap-[21px] px-[20px]">
         <h2 className="sub-heading text-anim">the big three</h2>
 
         <p className="max-w-[879px] leading-[130%] tracking-tighter font-semibold text-anim">
@@ -20,22 +20,22 @@ export default function Bigthree() {
           relentless innovation and timeless allure.
         </p>
 
-        <Button>read stories</Button>
+        <Button bgColor="#00cc52">read stories</Button>
       </div>
 
       {/* Container for logos and their names */}
-      <div className="h-[130vh] max-h-[1103px] flex">
+      <div className="h-[130vh] max-h-[1103px] bg-black -800:max-h-[initial] -800:h-fit -800:flex-col flex">
         <LogoCard brand="ferrari" img={ferrari} />
         <LogoCard brand="porsche" img={porsche} />
         <LogoCard brand="lamborghini" img={lambo} />
-      </div>
+      </div>  
     </section>
   );
 }
 
 export function LogoCard({ brand, img }) {
   return (
-    <div className="h-full w-[33.3333%] flex flex-col justify-end items-start pl-[63px] pb-[58px] relative">
+    <div className="h-full -800:w-full -800:h-[200vh] -800:mx-auto -800:max-w-[400px] -800:max-h-[500px] w-[33.3333%] flex flex-col justify-end items-start pl-[63px] pb-[58px] relative">
       <img
         src={img}
         alt="brand"

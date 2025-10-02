@@ -12,7 +12,7 @@ import CustomCursor from "./CustomCusrsor";
 export default function Home() {
   return (
     <>
-      <Navbar />
+      {/* <Navbar /> */}
       <Hero />
       <ClassicCollections />
       <Vision />
@@ -20,7 +20,7 @@ export default function Home() {
       <Vintage />
       <Legends />
       <Footer />
-      <CustomCursor />
+      {/* <CustomCursor /> */}
     </>
   );
 }

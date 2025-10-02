@@ -7,7 +7,7 @@ export default function Footer() {
   return (
     <footer className="pt-[50px] flex flex-col  items-center bg-black text-white overflow-hidden">
       {/* Footer nav */}
-      <div className="w-full max-w-[791px] flex justify-between items-center gap-[10px] ">
+      <div className="w-full max-w-[791px] flex justify-between items-center gap-[10px] px-[20px] -600:flex-col -600:justify-center -600:gap-[40px]">
         {navLinks.map((link) => {
           return (
             <a className="font-semibold line-anim white" href={link.link}>
@@ -18,10 +18,10 @@ export default function Footer() {
       </div>
 
       {/* Container for address, number and mail */}
-      <div className="max-w-[1000px] w-full flex justify-between items-center gap-[10px] font-semibold mt-[30px]">
+      <div className="max-w-[1000px] px-[20px] w-full flex -1024:flex-col -1024:justify-center -1024:gap-[50px] justify-between gap-[10px] flex-wrap text-center items-center font-semibold mt-[40px] -600:mt-[80px]">
         <p>phone: +1 (555) 123-4567</p>
         <p>address: 1955 heritage lane, beverly hills, ca 90210</p>
-        <a href="mailto:hello@retro.com" className="line-anim">
+        <a href="mailto:hello@retro.com" className="line-anim white">
           email: hello@retro.com
         </a>
       </div>
@@ -52,7 +52,7 @@ export default function Footer() {
       <ParallaxContainer
         imgSrc={car}
         className="mt-[40px] w-full"
-        imgClass="aspect-[1440/368]"
+        imgClass="aspect-[1440/624] origin-right -600:aspect-[425/624]"
       />
     </footer>
   );

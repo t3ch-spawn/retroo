@@ -10,14 +10,14 @@ import ParallaxContainer from "../reusables/ParallaxContainer";
 
 export default function ClassicCollections() {
   return (
-    <section className="bg-black text-white py-[263px] ">
+    <section className="bg-black text-white py-[263px] -1024:py-[100px]">
       {/* Container for heading, para and btn */}
-      <div className="">
-        <h2 className="ml-[15.4vw] sub-heading text-anim">
+      <div className="px-[20px]">
+        <h2 className="ml-[15.4vw] -1024:ml-[0] sub-heading text-anim">
           classic collections
         </h2>
         {/* para */}
-        <p className="font-medium leading-[100%] mt-[9px] ml-[30.7vw] max-w-[590px] text-anim">
+        <p className="font-medium leading-[100%] mt-[9px] ml-[30.7vw] -1024:ml-[0] max-w-[590px] -1024:mt-[20px] text-anim">
           each model tells a story of passion, innovation, and the enduring
           allure of vintage design. take a trip down memory lane, where every
           detail celebrates the artistry and engineering that transformed cars
@@ -25,13 +25,17 @@ export default function ClassicCollections() {
         </p>
 
         {/* Button */}
-        <Button className="mt-[30px] ml-[30.7vw]">see more collections</Button>
-
-        {/* Container for marquees */}
-        <div className="flex flex-col gap-[112px] mt-[200px]">
-          <CollectionMarquee />
-          <CollectionMarquee reverse={true} />
-        </div>
+        <Button
+          bgColor={"#d68e00"}
+          className="mt-[30px] ml-[30.7vw] -1024:ml-[0]"
+        >
+          see more collections
+        </Button>
+      </div>
+      {/* Container for marquees */}
+      <div className="flex flex-col gap-[112px] mt-[200px] -1024:mt-[150px]">
+        <CollectionMarquee />
+        <CollectionMarquee reverse={true} />
       </div>
     </section>
   );
@@ -163,13 +167,13 @@ function CollectionMarquee({ reverse }) {
 
 function CollectionCard({ img, era, heading, power, exclusive, nickname }) {
   return (
-    <div className="w-[460px] flex flex-col items-start justify-start">
+    <div className="w-[460px] -1024:max-w-[300px] flex flex-col items-start justify-start">
       {/* Image */}
       {/* <img src={img} className="w-[460px] h-[579px]" alt="car" /> */}
       <ParallaxContainer imgClass="aspect-[460/579]" imgSrc={img} />
 
       {/* Heading */}
-      <h3 className="text-[40px] mt-[15px] leading-[100%] tracking-tighter font-semibold inter">
+      <h3 className="text-[40px] -1024:text-[32px] mt-[15px] leading-[100%] tracking-tighter font-semibold inter">
         {heading}
       </h3>
 

@@ -5,7 +5,7 @@ import ParallaxContainer from "../reusables/ParallaxContainer";
 
 export default function Vintage() {
   return (
-    <section className="py-[328px] relative flex flex-col text-white text-center justify-center items-center gap-[25px]">
+    <section className="py-[328px] -800:py-[200px] px-[20px] relative flex flex-col text-white text-center justify-center items-center gap-[25px]  -600:gap-[20px]">
       {/* Heading */}
       <h2 className="sub-heading z-[3] relative text-anim">
         vintage in motion
@@ -19,7 +19,9 @@ export default function Vintage() {
         and live the story of automotive excellence.
       </p>
 
-      <Button className="z-[3]">book appointment</Button>
+      <Button bgColor="#00d1d1" className="z-[3]">
+        book appointment
+      </Button>
 
       {/* Background image */}
       {/* <img
@@ -31,9 +33,9 @@ export default function Vintage() {
       <ParallaxContainer
         pFrom={-20}
         pTo={30}
-        className="!absolute z-[2] w-full h-full top-0 object-cover"
+        className="!absolute z-[2] w-full h-full  top-0 object-cover"
         imgSrc={vintage}
-        imgClass="aspect-[1440/935]"
+        imgClass="aspect-[1440/935] -1024:scale-[1.3]"
       />
     </section>
   );

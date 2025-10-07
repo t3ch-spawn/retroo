@@ -16,66 +16,71 @@ export default function CustomCursor() {
     let lastX = 0;
     let lastY = 0;
     const threshold = 20; // pixels
-    document.addEventListener("mousemove", (e) => {
-      if (!cursorDot || !cursor) return;
-      if (cursorDot.classList.contains("should-move")) {
-        cursorDot.style.top = e.clientY + "px";
-        cursorDot.style.left = e.clientX + "px";
 
-        cursor.animate(
-          {
-            left: e.clientX + "px",
-            top: e.clientY + "px",
-          },
-          {
-            duration: 700,
-            fill: "forwards",
+    const mm = gsap.matchMedia();
+
+    mm.add("(min-width: 1024px)", () => {
+      document.addEventListener("mousemove", (e) => {
+        if (!cursorDot || !cursor) return;
+        if (cursorDot.classList.contains("should-move")) {
+          cursorDot.style.top = e.clientY + "px";
+          cursorDot.style.left = e.clientX + "px";
+
+          cursor.animate(
+            {
+              left: e.clientX + "px",
+              top: e.clientY + "px",
+            },
+            {
+              duration: 700,
+              fill: "forwards",
+            }
+          );
+
+          cursorDot.classList.add("active");
+          cursor.classList.add("active");
+
+          const dx = Math.abs(e.clientX - lastX);
+          const dy = Math.abs(e.clientY - lastY);
+
+          // Check if difference between current x and y position is greater than threshold value
+          if (dx > threshold || dy > threshold) {
+            lastX = e.clientX;
+            lastY = e.clientY;
+            const wheelCont = document.createElement("div");
+            const wheelImg = document.createElement("img");
+
+            // Pick a random number between 0 and 5
+            const randomIdx = gsap.utils.random(0, 5);
+
+            // Use that number to get an svg src from the wheels array
+            // wheelImg.src = wheels[Math.floor(randomIdx)];
+            wheelImg.src = steer_1;
+            wheelCont.classList.add("wheelCont");
+            wheelCont.appendChild(wheelImg);
+
+            wheelCont.style.top = e.clientY + "px";
+            wheelCont.style.left = e.clientX + "px";
+            document.body.appendChild(wheelCont);
+
+            const randomId = "id-" + Math.random().toString(36).substr(2, 9);
+            wheelCont.id = randomId;
+            gsap
+              .timeline()
+              .to(`#${randomId}`, {
+                scale: 1,
+              })
+              .to(`#${randomId}`, {
+                scale: 0,
+                stagger: 0.02,
+                delay: 0.3,
+                onComplete: () => {
+                  wheelCont.remove();
+                },
+              });
           }
-        );
-
-        cursorDot.classList.add("active");
-        cursor.classList.add("active");
-
-        const dx = Math.abs(e.clientX - lastX);
-        const dy = Math.abs(e.clientY - lastY);
-
-        // Check if difference between current x and y position is greater than threshold value
-        if (dx > threshold || dy > threshold) {
-          lastX = e.clientX;
-          lastY = e.clientY;
-          const wheelCont = document.createElement("div");
-          const wheelImg = document.createElement("img");
-
-          // Pick a random number between 0 and 5
-          const randomIdx = gsap.utils.random(0, 5);
-
-          // Use that number to get an svg src from the wheels array
-          // wheelImg.src = wheels[Math.floor(randomIdx)];
-          wheelImg.src = steer_1;
-          wheelCont.classList.add("wheelCont");
-          wheelCont.appendChild(wheelImg);
-
-          wheelCont.style.top = e.clientY + "px";
-          wheelCont.style.left = e.clientX + "px";
-          document.body.appendChild(wheelCont);
-
-          const randomId = "id-" + Math.random().toString(36).substr(2, 9);
-          wheelCont.id = randomId;
-          gsap
-            .timeline()
-            .to(`#${randomId}`, {
-              scale: 1,
-            })
-            .to(`#${randomId}`, {
-              scale: 0,
-              stagger: 0.02,
-              delay: 0.3,
-              onComplete: () => {
-                wheelCont.remove();
-              },
-            });
         }
-      }
+      });
     });
   }, []);
 

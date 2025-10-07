@@ -176,7 +176,7 @@ function CollectionCard({ img, era, heading, power, exclusive, nickname }) {
       />
 
       {/* Heading */}
-      <h3 className="text-[40px] -1024:text-[32px] mt-[15px] leading-[100%] tracking-tighter font-semibold inter">
+      <h3 className="mt-[15px] card-heading">
         {heading}
       </h3>
 

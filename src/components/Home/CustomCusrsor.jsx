@@ -50,7 +50,8 @@ export default function CustomCursor() {
           const randomIdx = gsap.utils.random(0, 5);
 
           // Use that number to get an svg src from the wheels array
-          wheelImg.src = wheels[Math.floor(randomIdx)];
+          // wheelImg.src = wheels[Math.floor(randomIdx)];
+          wheelImg.src = steer_1;
           wheelCont.classList.add("wheelCont");
           wheelCont.appendChild(wheelImg);
 
@@ -80,9 +81,9 @@ export default function CustomCursor() {
 
   return (
     <>
-      {/* <div className="custom-cursor opacity-0  fixed bg-transparent border-[1px] border-black rounded-full h-[30px] w-[30px] translate-x-[-50%] translate-y-[-50%]  z-[210] pointer-events-none -1024:hidden"></div>
+      <div className="custom-cursor opacity-0  fixed bg-transparent border-[1px] border-black rounded-full h-[30px] w-[30px] translate-x-[-50%] translate-y-[-50%]  z-[210] pointer-events-none hidden"></div>
 
-      <div className="cursor-dot opacity-0 should-move  h-[5px] w-[5px] fixed bg-black rounded-[50%] pointer-events-none z-[215] translate-x-[-50%] translate-y-[-50%] -1024:hidden"></div> */}
+      <div className="cursor-dot opacity-0 should-move  h-[5px] w-[5px] fixed bg-black rounded-[50%] pointer-events-none z-[215] translate-x-[-50%] translate-y-[-50%] hidden"></div>
     </>
   );
 }

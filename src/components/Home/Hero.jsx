@@ -5,7 +5,7 @@ import ParallaxContainer from "../reusables/ParallaxContainer";
 
 export default function Hero() {
   return (
-    <section className="flex flex-col justify-center items-center pb-[40px] gap-[24px] pt-[60px]">
+    <section className="other-hero flex flex-col justify-center items-center pb-[40px] gap-[24px] pt-[180px]">
       {/* Heading */}
       <h1 className="logo-text">retro</h1>
 

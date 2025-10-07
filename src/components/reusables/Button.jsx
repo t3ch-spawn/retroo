@@ -11,6 +11,7 @@ export default function Button({ className, children, bgColor }) {
       opacity: 0,
       y: 70,
       duration: 0.7,
+      delay: btn.current.classList.contains("hero-btn") ? 0.7 : 0,
       ease: "power1.inOut",
       scrollTrigger: { trigger: btn.current, start: "top 87%" },
     });

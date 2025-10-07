@@ -8,11 +8,13 @@ import Vintage from "./Vintage";
 import Footer from "../reusables/Footer";
 import Legends from "./Legends";
 import CustomCursor from "./CustomCusrsor";
+import { FakeBgOverlay, TransitionOverlay } from "../reusables/TransitionLink";
+import TextAnimation from "../reusables/TextAnimation";
 
 export default function Home() {
   return (
     <>
-      {/* <Navbar /> */}
+      <Navbar />
       <Hero />
       <ClassicCollections />
       <Vision />
@@ -20,7 +22,10 @@ export default function Home() {
       <Vintage />
       <Legends />
       <Footer />
-      {/* <CustomCursor /> */}
+      <CustomCursor />
+      <TransitionOverlay />
+      <FakeBgOverlay />
+      <TextAnimation/>
     </>
   );
 }

@@ -2,6 +2,7 @@ import React from "react";
 import { navLinks } from "./Navbar";
 import car from "../../assets/footer_car.png";
 import ParallaxContainer from "./ParallaxContainer";
+import TransitionLink from "./TransitionLink";
 
 export default function Footer() {
   return (
@@ -10,9 +11,12 @@ export default function Footer() {
       <div className="w-full max-w-[791px] flex justify-between items-center gap-[10px] px-[20px] -600:flex-col -600:justify-center -600:gap-[40px]">
         {navLinks.map((link) => {
           return (
-            <a className="font-semibold line-anim white" href={link.link}>
+            <TransitionLink
+              className="font-semibold line-anim white"
+              href={link.link}
+            >
               {link.name}
-            </a>
+            </TransitionLink>
           );
         })}
       </div>

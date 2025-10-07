@@ -39,7 +39,7 @@ export function LogoCard({ brand, img }) {
       <img
         src={img}
         alt="brand"
-        className="absolute top-0 left-0 h-full w-full z-[2] object-cover"
+        className="absolute top-0 left-0 h-full w-full z-[2] object-cover aspect-[480/1103] -800:aspect-[400/500]"
       />
 
       <p className="text-[40px] text-white font-semibold tracking-tighter inter relative z-[3]">

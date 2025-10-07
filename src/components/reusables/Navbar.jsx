@@ -64,7 +64,7 @@ export default function Navbar() {
   });
 
   return (
-    <nav className="flex fixed left-0 top-0 bg-transparent justify-center  py-[45px] items-center w-full z-[50] text-black">
+    <nav className="px-[20px] flex fixed left-0 top-0 bg-transparent justify-center  py-[45px] items-center w-full z-[50] text-black">
       {/* Container for links */}
       <div className="flex flex-wrap justify-between w-full gap-[10px] max-w-[791px]">
         {navLinks.map((link) => {

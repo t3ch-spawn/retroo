@@ -46,7 +46,7 @@ export default function ParallaxContainer({
     <div
       // style={{ height: `${height}px` }}
       ref={contRef}
-      className={`overflow-hidden relative  ${className} ${imgClass}`}
+      className={`overflow-hidden relative  ${className}`}
     >
       <img
         ref={picRef}

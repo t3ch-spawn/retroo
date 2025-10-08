@@ -1,8 +1,8 @@
 import React from "react";
 import { CarCard } from "./Midnight";
-import racebred1 from "@/assets/racebred1.png";
-import racebred2 from "@/assets/racebred2.png";
-import racebred3 from "@/assets/racebred3.png";
+import racebred1 from "@/assets/racebred1.webp";
+import racebred2 from "@/assets/racebred2.webp";
+import racebred3 from "@/assets/racebred3.webp";
 
 export default function RaceBred() {
   return (

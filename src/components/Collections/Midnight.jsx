@@ -1,7 +1,7 @@
 import React from "react";
-import midnight_1 from "@/assets/midnight_1.png";
-import midnight_2 from "@/assets/midnight_2.png";
-import midnight_3 from "@/assets/midnight_3.png";
+import midnight_1 from "@/assets/midnight_1.webp";
+import midnight_2 from "@/assets/midnight_2.webp";
+import midnight_3 from "@/assets/midnight_3.webp";
 import ParallaxContainer from "../reusables/ParallaxContainer";
 
 export default function Midnight() {

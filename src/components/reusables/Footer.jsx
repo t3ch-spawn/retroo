@@ -1,6 +1,6 @@
 import React from "react";
 import { navLinks } from "./Navbar";
-import car from "../../assets/footer_car.png";
+import car from "../../assets/footer_car.webp";
 import ParallaxContainer from "./ParallaxContainer";
 import TransitionLink from "./TransitionLink";
 

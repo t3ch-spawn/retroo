@@ -1,9 +1,9 @@
 import React from "react";
 import { BigThreeCar } from "../TheBigThree/BigThreeCars";
 import Appointment from "../Collections/Appointment";
-import ford from "@/assets/ford_big.png";
-import mclaren from "@/assets/mclaren_big.png";
-import alfa from "@/assets/alfa_big.png";
+import ford from "@/assets/ford_big.webp";
+import mclaren from "@/assets/mclaren_big.webp";
+import alfa from "@/assets/alfa_big.webp";
 
 export default function LegendsCars() {
   return (

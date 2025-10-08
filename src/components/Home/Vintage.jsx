@@ -1,5 +1,5 @@
 import React from "react";
-import vintage from "@/assets/vintage.png";
+import vintage from "@/assets/vintage.webp";
 import Button from "../reusables/Button";
 import ParallaxContainer from "../reusables/ParallaxContainer";
 

@@ -1,6 +1,6 @@
 import React from "react";
-import orangeCar from "@/assets/hero_img.png";
-import orangeCar_mob from "@/assets/hero_img_mob.png";
+import orangeCar from "@/assets/hero_img.webp";
+import orangeCar_mob from "@/assets/hero_img_mob.webp";
 import ParallaxContainer from "../reusables/ParallaxContainer";
 
 export default function Hero() {

@@ -1,9 +1,9 @@
 import React from "react";
 import ParallaxContainer from "../reusables/ParallaxContainer";
 import Appointment from "../Collections/Appointment";
-import ferrari_big from "@/assets/ferrari_big.png";
-import porsche_big from "@/assets/porsche_big.png";
-import lambo_big from "@/assets/lambo_big.png";
+import ferrari_big from "@/assets/ferrari_big.webp";
+import porsche_big from "@/assets/porsche_big.webp";
+import lambo_big from "@/assets/lambo_big.webp";
 
 export default function BigThreeCars() {
   return (

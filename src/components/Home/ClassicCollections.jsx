@@ -1,9 +1,9 @@
 import React, { useRef } from "react";
 import Button from "../reusables/Button";
-import rolls from "@/assets/rolls_collect.png";
-import ford from "@/assets/ford_collect.png";
-import lambo from "@/assets/lambo_collect.png";
-import ferrari from "@/assets/ferrari_collect.png";
+import rolls from "@/assets/rolls_collect.webp";
+import ford from "@/assets/ford_collect.webp";
+import lambo from "@/assets/lambo_collect.webp";
+import ferrari from "@/assets/ferrari_collect.webp";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import ParallaxContainer from "../reusables/ParallaxContainer";
@@ -176,9 +176,7 @@ function CollectionCard({ img, era, heading, power, exclusive, nickname }) {
       />
 
       {/* Heading */}
-      <h3 className="mt-[15px] card-heading">
-        {heading}
-      </h3>
+      <h3 className="mt-[15px] card-heading">{heading}</h3>
 
       {/* Container for facts */}
       <div className="tracking-tigheter font-medium">

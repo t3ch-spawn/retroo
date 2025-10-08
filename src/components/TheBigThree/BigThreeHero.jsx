@@ -1,8 +1,8 @@
 import React from "react";
 import Button from "../reusables/Button";
-import ferrari from "@/assets/ferrari_logo.png";
-import porsche from "@/assets/porsche_logo.png";
-import lambo from "@/assets/lambo_logo.png";
+import ferrari from "@/assets/ferrari_logo.webp";
+import porsche from "@/assets/porsche_logo.webp";
+import lambo from "@/assets/lambo_logo.webp";
 import { LogoCard } from "../Home/Bigthree";
 
 export default function BigThreeHero() {

@@ -1,8 +1,8 @@
 import React from "react";
 import { CarCard } from "./Midnight";
-import prewar1 from "@/assets/prewar1.png";
-import prewar2 from "@/assets/prewar2.png";
-import prewar3 from "@/assets/prewar3.png";
+import prewar1 from "@/assets/prewar1.webp";
+import prewar2 from "@/assets/prewar2.webp";
+import prewar3 from "@/assets/prewar3.webp";
 
 export default function PreWar() {
   return (

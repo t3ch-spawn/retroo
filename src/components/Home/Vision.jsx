@@ -1,4 +1,4 @@
-import enzo from "@/assets/enzo.png";
+import enzo from "@/assets/enzo.webp";
 import ParallaxContainer from "../reusables/ParallaxContainer";
 
 export default function Vision() {

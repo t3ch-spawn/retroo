@@ -1,9 +1,9 @@
 import React from "react";
 import Button from "../reusables/Button";
 import { LogoCard } from "../Home/Bigthree";
-import ford from "@/assets/ford_logo.png";
-import mclaren from "@/assets/mclaren_logo.png";
-import alfa from "@/assets/alfa_logo.png";
+import ford from "@/assets/ford_logo.webp";
+import mclaren from "@/assets/mclaren_logo.webp";
+import alfa from "@/assets/alfa_logo.webp";
 
 export default function LegendsHero() {
   return (

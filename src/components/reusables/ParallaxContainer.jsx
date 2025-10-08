@@ -19,7 +19,7 @@ export default function ParallaxContainer({
 
       setTimeout(() => {
         ScrollTrigger.refresh();
-      }, 400);
+      }, 1000);
 
       gsap.fromTo(
         picRef.current,
@@ -33,7 +33,7 @@ export default function ParallaxContainer({
           scrollTrigger: {
             trigger: contRef.current,
             scrub: true,
-            // markers: true,
+            markers: true,
             start: "top 95%",
             end: "bottom 0%",
           },

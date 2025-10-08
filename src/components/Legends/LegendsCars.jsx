@@ -7,7 +7,7 @@ import alfa from "@/assets/alfa_big.webp";
 
 export default function LegendsCars() {
   return (
-    <section className="flex flex-col">
+    <section className="flex flex-col px-[20px]">
       <BigThreeCar
         carName="ford mustang"
         phrase="the pony reborn"

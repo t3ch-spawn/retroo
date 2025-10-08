@@ -9,7 +9,7 @@ export default function LegendsHero() {
   return (
     <>
       {" "}
-      <section className="other-hero bg-[#EDEAE0] text-center flex flex-col justify-center items-center gap-[21px] px-[20px] pt-[179px] pb-[121px] -600:py-[80px]">
+      <section className="other-hero bg-[#EDEAE0] text-center flex flex-col justify-center items-center gap-[21px] px-[20px] pt-[179px] pb-[121px] -600:pt-[130px] -600:pb-[80px]">
         <h2 className="sub-heading text-anim hero-text">
           automotive legends of the 80's
         </h2>
@@ -26,9 +26,9 @@ export default function LegendsHero() {
         </Button>
       </section>
       <div className="h-[130vh] max-h-[1103px] flex  bg-black -800:max-h-[initial] -800:h-fit -800:flex-col ">
-        <LogoCard brand="ford mustang" img={ford} />
+        {/* <LogoCard brand="ford mustang" img={ford} />
         <LogoCard brand="mclaren" img={mclaren} />
-        <LogoCard brand="alfa romeo" img={alfa} />
+        <LogoCard brand="alfa romeo" img={alfa} /> */}
       </div>
     </>
   );

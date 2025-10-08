@@ -3,7 +3,7 @@ import Button from "../reusables/Button";
 
 export default function Appointment() {
   return (
-    <section className="py-[156px] flex flex-col justify-center items-center gap-[30px]">
+    <section className="py-[156px] flex flex-col justify-center items-center gap-[30px] px-[20px]">
       <p className="max-w-[590px] text-center text-anim">
         you didn't think we'd show you all the cars, did you? book an
         appointment and discover what other legendary machines are hiding in our

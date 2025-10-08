@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useEffect } from "react";
 import midnight_1 from "@/assets/midnight_1.webp";
 import midnight_2 from "@/assets/midnight_2.webp";
 import midnight_3 from "@/assets/midnight_3.webp";
 import ParallaxContainer from "../reusables/ParallaxContainer";
+import { useGSAP } from "@gsap/react";
 
 export default function Midnight() {
   return (
@@ -65,6 +66,8 @@ export function CarCard({
   nickname,
   topSpeed,
 }) {
+  useGSAP(() => {}, [imgClass]);
+
   return (
     <div
       className={`flex flex-col items-start justify-center gap-[15px] ${className}`}

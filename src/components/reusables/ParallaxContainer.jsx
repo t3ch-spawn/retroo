@@ -14,46 +14,39 @@ export default function ParallaxContainer({
   const picRef = useRef(null);
   const [height, setHeight] = useState(0);
 
-  useEffect(() => {
-    window.addEventListener("resize", () => {
-      setContainerHeight();
-    });
-
-    setContainerHeight();
-  }, []);
-
-  function setContainerHeight() {
-    if (picRef.current && contRef.current) {
-      const picHeight = picRef.current.getBoundingClientRect().height;
-      setHeight(picHeight * 0.88);
-    }
-  }
-
   useGSAP(() => {
-    gsap.fromTo(
-      picRef.current,
-      {
-        // y: `-100%`,
-        y: `${pFrom}%`,
-      },
-      {
-        y: `${pTo}%`,
-        // y: `100%`,
-        scrollTrigger: {
-          trigger: contRef.current,
-          scrub: true,
-          start: "top 95%",
-          end: "bottom 0%",
+    if (imgClass) {
+
+      setTimeout(() => {
+        ScrollTrigger.refresh();
+      }, 400);
+
+      gsap.fromTo(
+        picRef.current,
+        {
+          // y: `-100%`,
+          y: `${pFrom}%`,
         },
-      }
-    );
-  });
+        {
+          y: `${pTo}%`,
+          // y: `100%`,
+          scrollTrigger: {
+            trigger: contRef.current,
+            scrub: true,
+            // markers: true,
+            start: "top 95%",
+            end: "bottom 0%",
+          },
+        }
+      );
+    }
+  }, [imgClass]);
 
   return (
     <div
-      //   style={{ height: `${height}px` }}
+      // style={{ height: `${height}px` }}
       ref={contRef}
-      className={`overflow-hidden relative  ${className}`}
+      className={`overflow-hidden relative  ${className} ${imgClass}`}
     >
       <img
         ref={picRef}

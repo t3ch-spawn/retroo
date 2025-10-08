@@ -9,7 +9,7 @@ export default function BigThreeHero() {
   return (
     <section className="big-three-hero ">
       {/* Container for text */}
-      <div className="bg-[#1B3A4B] text-white pt-[179px] pb-[107px] -800:pb-[79px] flex flex-col justify-center items-center gap-[21px] px-[20px] text-center">
+      <div className="bg-[#1B3A4B] text-white pt-[179px] -600:pt-[130px] pb-[107px] -800:pb-[79px] flex flex-col justify-center items-center gap-[21px] px-[20px] text-center">
         <h2 className="sub-heading text-anim hero-text">the big three</h2>
 
         <p className="max-w-[879px] leading-[130%] tracking-tighter font-semibold text-anim hero-text">

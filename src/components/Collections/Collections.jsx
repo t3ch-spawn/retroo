@@ -9,10 +9,12 @@ import Appointment from "./Appointment";
 import Navbar from "../reusables/Navbar";
 import CustomCursor from "../Home/CustomCusrsor";
 import TextAnimation from "../reusables/TextAnimation";
+import FullLoader from "../reusables/FullLoader";
 
 export default function Collections() {
   return (
     <>
+      <FullLoader />
       <Navbar />
       <CollectionsHero />
       <TransitionOverlay />

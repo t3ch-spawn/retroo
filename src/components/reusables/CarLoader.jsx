@@ -2,10 +2,12 @@ import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { SplitText } from "gsap/all";
 import React, { useRef, useState } from "react";
+import { useApp } from "./AppContext";
 
 export default function CarLoader() {
   const [progressNumber, setProgressNumber] = useState(0);
-  const [hasLoaded, setHasLoaded] = useState(false);
+  const { setLoaded } = useApp();
+
   const loaderTimeline = useRef(null);
   useGSAP(() => {
     gsap.set(".hero-img", { opacity: 0 });
@@ -61,6 +63,9 @@ export default function CarLoader() {
               opacity: 1,
               delay: 0.6,
               duration: 1,
+              onComplete: () => {
+                setLoaded(true);
+              },
             });
           },
         },

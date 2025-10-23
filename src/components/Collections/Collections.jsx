@@ -14,7 +14,7 @@ import FullLoader from "../reusables/FullLoader";
 export default function Collections() {
   return (
     <>
-      <FullLoader />
+      {/* <FullLoader /> */}
       <Navbar />
       <CollectionsHero />
       <TransitionOverlay />

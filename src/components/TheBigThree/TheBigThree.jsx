@@ -11,7 +11,7 @@ import FullLoader from "../reusables/FullLoader";
 export default function TheBigThree() {
   return (
     <>
-      <FullLoader />
+      {/* <FullLoader /> */}
       <Navbar />
       <BigThreeHero />
       <BigThreeCars />

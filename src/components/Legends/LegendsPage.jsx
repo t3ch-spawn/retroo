@@ -11,7 +11,7 @@ import FullLoader from "../reusables/FullLoader";
 export default function LegendsPage() {
   return (
     <>
-      <FullLoader />
+      {/* <FullLoader /> */}
       <Navbar />
       <LegendsHero />
       <LegendsCars />

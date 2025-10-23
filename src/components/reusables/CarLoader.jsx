@@ -67,31 +67,29 @@ export default function CarLoader() {
         "<0.6"
       );
 
-    setTimeout(() => {
-      const queue = new createjs.LoadQueue(false);
-      queue.loadFile("/src/assets/alfa_big.webp");
-      queue.loadFile("/src/assets/racebred1.webp");
-      queue.loadFile("/src/assets/ferrari_big.webp");
-      queue.loadFile("/src/assets/lambo_big.webp");
-      queue.loadFile("/src/assets/hero_img.webp");
-      queue.loadFile("/src/assets/porsche_big.webp");
-      queue.loadFile("/src/assets/midnight_3.webp");
-      queue.loadFile("/src/assets/prewar2.webp");
-      queue.loadFile("/src/assets/ford_big.webp");
+    const queue = new createjs.LoadQueue(false);
+    queue.loadFile("/src/assets/alfa_big.webp");
+    queue.loadFile("/src/assets/racebred1.webp");
+    queue.loadFile("/src/assets/ferrari_big.webp");
+    queue.loadFile("/src/assets/lambo_big.webp");
+    queue.loadFile("/src/assets/hero_img.webp");
+    queue.loadFile("/src/assets/porsche_big.webp");
+    queue.loadFile("/src/assets/midnight_3.webp");
+    queue.loadFile("/src/assets/prewar2.webp");
+    queue.loadFile("/src/assets/ford_big.webp");
 
-      queue.on("progress", (e) => {
-        const fill = document.querySelector(".loader-fill");
-        fill.style.width = `${e.progress * 100}%`;
-        setProgressNumber(e.progress * 100);
-      });
+    queue.on("progress", (e) => {
+      const fill = document.querySelector(".loader-fill");
+      fill.style.width = `${e.progress * 100}%`;
+      setProgressNumber(e.progress * 100);
+    });
 
-      queue.on("complete", () => {
-        loaderTimeline.current.play();
-        gsap.to(".loading-container", {
-          autoAlpha: 0,
-        });
+    queue.on("complete", () => {
+      loaderTimeline.current.play();
+      gsap.to(".loading-container", {
+        autoAlpha: 0,
       });
-    }, 1000);
+    });
   }, []);
 
   return (

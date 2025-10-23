@@ -7,7 +7,7 @@ export default function Hero() {
   return (
     <section className="other-hero flex flex-col justify-center items-center pb-[40px] gap-[24px] pt-[180px]">
       {/* Heading */}
-      <h1 className="logo-text">retro</h1>
+      <h1 className="logo-text leading-[100%] hero-text">retro</h1>
 
       {/* Huge image */}
       <ParallaxContainer
@@ -15,7 +15,7 @@ export default function Hero() {
         pTo={30}
         imgSrc={orangeCar}
         className="w-full mt-[26px] -1024:hidden"
-        imgClass="aspect-[1440/762] -1024:aspect-[472/600]"
+        imgClass="aspect-[1440/762] -1024:aspect-[472/600] hero-img"
       />
 
       {/* Hero image on mobile */}
@@ -24,7 +24,7 @@ export default function Hero() {
         pTo={30}
         imgSrc={orangeCar_mob}
         className="w-full mt-[26px] hidden -1024:block"
-        imgClass="aspect-[1440/762] -1024:aspect-[472/660] -1024:scale-[1.4]"
+        imgClass="aspect-[1440/762] -1024:aspect-[472/660] -1024:scale-[1.4] hero-img"
       />
 
       {/* paragraph */}

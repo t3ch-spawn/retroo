@@ -179,7 +179,7 @@ export default function ClassicCollections() {
       </div>
     </section>
   );
-}
+} 
 
 function CollectionMarquee({ reverse, list }) {
   const row1 = useRef(null);

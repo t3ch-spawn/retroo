@@ -15,6 +15,10 @@ export default function TransitionLink({
       opacity: 0,
     });
 
+    gsap.set(".loader-item", {
+      opacity: 1,
+    });
+
     gsap
       .timeline()
       .to(".fakeOverlay", {
@@ -81,7 +85,7 @@ export default function TransitionLink({
 export function TransitionOverlay({ className }) {
   return (
     <div
-      className={`fixed w-full top-0 h-[120vh] z-[200] bg-[#ff6200] pageOverlay translate-y-[100vh] ${className}`}
+      className={`fixed w-full top-0 h-[120vh] z-[100] bg-[#ff6200] pageOverlay translate-y-[100vh] ${className}`}
     ></div>
   );
 }
@@ -89,7 +93,7 @@ export function TransitionOverlay({ className }) {
 export function FakeBgOverlay({ className }) {
   return (
     <div
-      className={`fixed w-full top-0 h-[100vh] z-[200] bg-[#ff6200] fakeOverlay pointer-events-none ${className}`}
+      className={`fixed w-full top-0 h-[100vh] z-[100] bg-[#ff6200] fakeOverlay pointer-events-none ${className}`}
     ></div>
   );
 }

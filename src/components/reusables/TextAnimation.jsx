@@ -10,7 +10,7 @@ export default function TextAnimation() {
         type: "lines",
         mask: "lines",
         linesClass: "animLine",
-        autoSplit: true,
+        autoSplit: true,  
         onSplit: (self) => {
           return gsap
             .timeline({

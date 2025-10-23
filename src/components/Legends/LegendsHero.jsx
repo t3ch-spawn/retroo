@@ -26,9 +26,9 @@ export default function LegendsHero() {
         </Button>
       </section>
       <div className="h-[130vh] max-h-[1103px] flex  bg-black -800:max-h-[initial] -800:h-fit -800:flex-col ">
-        {/* <LogoCard brand="ford mustang" img={ford} />
+        <LogoCard brand="ford mustang" img={ford} />
         <LogoCard brand="mclaren" img={mclaren} />
-        <LogoCard brand="alfa romeo" img={alfa} /> */}
+        <LogoCard brand="alfa romeo" img={alfa} />
       </div>
     </>
   );

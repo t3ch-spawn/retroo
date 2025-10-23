@@ -23,6 +23,10 @@
     @apply text-[100px] font-semibold inter;
   }
 
+  .center-y {
+    @apply translate-y-[-50%] top-[50%];
+  }
+
   .card-heading {
     @apply text-[40px] -1024:text-[32px] leading-[100%] tracking-tighter font-semibold inter;
   }
@@ -131,6 +135,6 @@
   filter: invert(1);
 }
 
-.sjnwei {
-  background: #e65d00;
+.big-box {
+  clip-path: url(#car-clip);
 }

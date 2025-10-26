@@ -4,11 +4,24 @@ import steer_2 from "@/assets/steer_2.svg";
 import steer_3 from "@/assets/steer_3.svg";
 import steer_4 from "@/assets/steer_4.svg";
 import steer_5 from "@/assets/steer_5.svg";
+import wheel_2 from "@/assets/wheel_2.svg";
+import wheel_3 from "@/assets/wheel_3.svg";
+import wheel_4 from "@/assets/wheel_4.svg";
+import car_1 from "@/assets/car_1.svg";
+import car_2 from "@/assets/car_2.svg";
+import car_3 from "@/assets/car_3.svg";
 import gsap from "gsap";
 
 export default function CustomCursor() {
   useEffect(() => {
-    const wheels = [steer_1, steer_2, steer_3, steer_4, steer_5];
+    const wheels = [
+      steer_1,
+      steer_2,
+      steer_3,
+      wheel_2,
+      wheel_3,
+      wheel_4,
+    ];
 
     const cursor = document.querySelector(".custom-cursor");
     const cursorDot = document.querySelector(".cursor-dot");
@@ -51,11 +64,11 @@ export default function CustomCursor() {
             const wheelImg = document.createElement("img");
 
             // Pick a random number between 0 and 5
-            const randomIdx = gsap.utils.random(0, 5);
+            const randomIdx = gsap.utils.random(0, 6);
 
             // Use that number to get an svg src from the wheels array
-            // wheelImg.src = wheels[Math.floor(randomIdx)];
-            wheelImg.src = steer_1;
+            wheelImg.src = wheels[Math.floor(randomIdx)];
+            // wheelImg.src = steer_3;
             wheelCont.classList.add("wheelCont");
             wheelCont.appendChild(wheelImg);
 

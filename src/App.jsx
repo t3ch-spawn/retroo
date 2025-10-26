@@ -20,7 +20,7 @@ function App() {
   });
 
   return (
-    <main className="geist leading-[100%] tracking-tighter font-medium">
+    <main className="geist leading-[100%] tracking-tighter font-medium bg-white">
       {/* Routes */}
       <Routes>
         <Route path="/" element={<Home />} />
